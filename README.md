@@ -1,6 +1,6 @@
-# Webpack Virtual Directories
+# Webpack Virtual Folders
 
-**Webpack Virtual Directories** is a webpack plugin that lets you build virtual
+**Webpack Virtual Folders** is a webpack plugin that lets you build virtual
 directories relative to the entry file instead of symlinking.
 
 ## Installation
@@ -8,7 +8,7 @@ directories relative to the entry file instead of symlinking.
 > Note: this has only been tested for Webpack 4 *(though it should work for Webpack 3)*
 
 ```bash
-npm i webpack-virtual-directories --save-dev
+npm i @openovate/webpack-virtual-folders --save-dev
 ```
 
 ## Usage
@@ -19,12 +19,12 @@ denoted by `actual/location/of/path`.
 
 ```js
 //# FILE: webpack.config.json
-const VirtualDirectoryPlugin = require('webpack-virtual-directories');
+const VirtualFoldersPlugin = require('@openovate/webpack-virtual-folders');
 
 module.exports = {
   ...
   plugins: [
-    new VirtualDirectoryPlugin({
+    new VirtualFoldersPlugin({
       'some/virtual/path/in/entry/folder': path.resolve(__dirname, 'actual/location/of/path')
     })
   ]
@@ -63,7 +63,7 @@ module.exports = { name: 'iPhone' }
 
 ```js
 const path = require('path');
-const VirtualDirectoryPlugin = require('webpack-virtual-directories');
+const VirtualFoldersPlugin = require('@openovate/webpack-virtual-folders');
 
 module.exports = {
   mode: 'development',
@@ -75,7 +75,7 @@ module.exports = {
     path: path.resolve(__dirname, 'public')
   },
   plugins: [
-    new VirtualDirectoryPlugin({
+    new VirtualFoldersPlugin({
       'src/product': path.resolve(__dirname, '/product')
     })
   ]
@@ -86,7 +86,7 @@ module.exports = {
 
 ```bash
 $ npm init -y
-$ npm i webpack webpack-cli webpack-virtual-directories --save-dev
+$ npm i webpack webpack-cli @openovate/webpack-virtual-folders --save-dev
 $ npx webpack --config webpack.config.js
 ```
 
