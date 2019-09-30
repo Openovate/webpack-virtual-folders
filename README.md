@@ -1,3 +1,5 @@
+> DEPRECATION NOTICE: Moved to [@openovate/webpack-jailbreak](https://github.com/Openovate/webpack-jailbreak)
+
 # Webpack Virtual Folders
 
 **Webpack Virtual Folders** is a webpack plugin that lets you build virtual
