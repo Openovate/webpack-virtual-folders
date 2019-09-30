@@ -1,6 +1,6 @@
 {
   "name": "@openovate/webpack-virtual-folders",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Webpack Virtual Folders is a webpack plugin that lets you build virtual directories relative to the entry file instead of symlinking.",
   "main": "index.js",
   "scripts": {
